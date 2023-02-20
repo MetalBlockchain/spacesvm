@@ -81,15 +81,15 @@ func init() {
 
 	flag.StringVar(
 		&execPath,
-		"avalanchego-path",
+		"metalgo-path",
 		"",
-		"avalanchego executable path",
+		"metalgo executable path",
 	)
 	flag.StringVar(
 		&pluginDir,
-		"avalanchego-plugin-dir",
+		"metalgo-plugin-dir",
 		"",
-		"avalanchego plugin directory",
+		"metalgo plugin directory",
 	)
 	flag.StringVar(
 		&vmGenesisPath,
@@ -229,12 +229,12 @@ done:
 	uris, err := cli.URIs(cctx)
 	ccancel()
 	gomega.Expect(err).Should(gomega.BeNil())
-	outf("{{blue}}avalanche HTTP RPCs URIs:{{/}} %q\n", uris)
+	outf("{{blue}}metal HTTP RPCs URIs:{{/}} %q\n", uris)
 
 	for _, u := range uris {
 		rpcEP := fmt.Sprintf("%s/ext/bc/%s/rpc", u, blockchainID)
 		spacesvmRPCEps = append(spacesvmRPCEps, rpcEP)
-		outf("{{blue}}avalanche spacesvm RPC:{{/}} %q\n", rpcEP)
+		outf("{{blue}}metal spacesvm RPC:{{/}} %q\n", rpcEP)
 	}
 
 	pid := os.Getpid()
