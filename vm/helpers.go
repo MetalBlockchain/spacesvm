@@ -9,9 +9,9 @@ import (
 	"sort"
 	"time"
 
-	"github.com/ava-labs/avalanchego/ids"
+	"github.com/MetalBlockchain/metalgo/ids"
 
-	"github.com/ava-labs/spacesvm/chain"
+	"github.com/MetalBlockchain/spacesvm/chain"
 )
 
 const (

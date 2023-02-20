@@ -6,8 +6,8 @@ package chain
 import (
 	"strconv"
 
-	"github.com/ava-labs/spacesvm/parser"
-	"github.com/ava-labs/spacesvm/tdata"
+	"github.com/MetalBlockchain/spacesvm/parser"
+	"github.com/MetalBlockchain/spacesvm/tdata"
 )
 
 var _ UnsignedTransaction = &DeleteTx{}

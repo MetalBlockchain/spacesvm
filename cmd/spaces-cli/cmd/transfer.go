@@ -13,8 +13,8 @@ import (
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 
-	"github.com/ava-labs/spacesvm/chain"
-	"github.com/ava-labs/spacesvm/client"
+	"github.com/MetalBlockchain/spacesvm/chain"
+	"github.com/MetalBlockchain/spacesvm/client"
 )
 
 var transferCmd = &cobra.Command{

@@ -10,8 +10,8 @@ package chain
 import (
 	reflect "reflect"
 
-	ids "github.com/ava-labs/avalanchego/ids"
-	set "github.com/ava-labs/avalanchego/utils/set"
+	ids "github.com/MetalBlockchain/metalgo/ids"
+	set "github.com/MetalBlockchain/metalgo/utils/set"
 	gomock "github.com/golang/mock/gomock"
 )
 

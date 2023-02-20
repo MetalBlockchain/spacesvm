@@ -4,9 +4,9 @@
 package vm
 
 import (
-	"github.com/ava-labs/avalanchego/snow"
-	"github.com/ava-labs/avalanchego/vms"
-	"github.com/ava-labs/spacesvm/vm"
+	"github.com/MetalBlockchain/metalgo/snow"
+	"github.com/MetalBlockchain/metalgo/vms"
+	"github.com/MetalBlockchain/spacesvm/vm"
 )
 
 var _ vms.Factory = &Factory{}

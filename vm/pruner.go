@@ -6,10 +6,10 @@ package vm
 import (
 	"time"
 
-	"github.com/ava-labs/avalanchego/database/versiondb"
+	"github.com/MetalBlockchain/metalgo/database/versiondb"
 	log "github.com/inconshreveable/log15"
 
-	"github.com/ava-labs/spacesvm/chain"
+	"github.com/MetalBlockchain/spacesvm/chain"
 )
 
 func (vm *VM) pruneCall() bool {

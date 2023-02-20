@@ -8,12 +8,12 @@ import (
 	"crypto/rand"
 	"testing"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/set"
+	"github.com/MetalBlockchain/metalgo/ids"
+	"github.com/MetalBlockchain/metalgo/utils/set"
 	"github.com/ethereum/go-ethereum/crypto"
 
-	"github.com/ava-labs/spacesvm/chain"
-	"github.com/ava-labs/spacesvm/mempool"
+	"github.com/MetalBlockchain/spacesvm/chain"
+	"github.com/MetalBlockchain/spacesvm/mempool"
 )
 
 // $ go install -v golang.org/x/perf/cmd/benchstat@latest

@@ -12,9 +12,9 @@ import (
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 
-	"github.com/ava-labs/spacesvm/client"
-	"github.com/ava-labs/spacesvm/parser"
-	"github.com/ava-labs/spacesvm/tree"
+	"github.com/MetalBlockchain/spacesvm/client"
+	"github.com/MetalBlockchain/spacesvm/parser"
+	"github.com/MetalBlockchain/spacesvm/tree"
 )
 
 var setFileCmd = &cobra.Command{

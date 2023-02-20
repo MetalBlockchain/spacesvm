@@ -10,8 +10,8 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/spacesvm/tdata"
+	"github.com/MetalBlockchain/metalgo/ids"
+	"github.com/MetalBlockchain/spacesvm/tdata"
 )
 
 const (

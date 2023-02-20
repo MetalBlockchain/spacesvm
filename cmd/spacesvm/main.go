@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ava-labs/avalanchego/vms/rpcchainvm"
-	"github.com/ava-labs/spacesvm/cmd/spacesvm/version"
-	"github.com/ava-labs/spacesvm/vm"
+	"github.com/MetalBlockchain/metalgo/vms/rpcchainvm"
+	"github.com/MetalBlockchain/spacesvm/cmd/spacesvm/version"
+	"github.com/MetalBlockchain/spacesvm/vm"
 	log "github.com/inconshreveable/log15"
 	"github.com/spf13/cobra"
 )

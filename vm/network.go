@@ -6,9 +6,9 @@ package vm
 import (
 	"context"
 
-	"github.com/ava-labs/avalanchego/cache"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/spacesvm/chain"
+	"github.com/MetalBlockchain/metalgo/cache"
+	"github.com/MetalBlockchain/metalgo/ids"
+	"github.com/MetalBlockchain/spacesvm/chain"
 	log "github.com/inconshreveable/log15"
 )
 

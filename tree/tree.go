@@ -12,14 +12,14 @@ import (
 	"io"
 	"strings"
 
-	"github.com/ava-labs/avalanchego/utils/units"
+	"github.com/MetalBlockchain/metalgo/utils/units"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/fatih/color"
 
-	"github.com/ava-labs/spacesvm/chain"
-	"github.com/ava-labs/spacesvm/client"
-	"github.com/ava-labs/spacesvm/parser"
+	"github.com/MetalBlockchain/spacesvm/chain"
+	"github.com/MetalBlockchain/spacesvm/client"
+	"github.com/MetalBlockchain/spacesvm/parser"
 )
 
 type Root struct {

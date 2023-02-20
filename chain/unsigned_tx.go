@@ -4,11 +4,11 @@
 package chain
 
 import (
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/ids"
+	"github.com/MetalBlockchain/metalgo/database"
+	"github.com/MetalBlockchain/metalgo/ids"
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/ava-labs/spacesvm/tdata"
+	"github.com/MetalBlockchain/spacesvm/tdata"
 )
 
 type TransactionContext struct {

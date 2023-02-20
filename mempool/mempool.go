@@ -7,10 +7,10 @@ import (
 	"container/heap"
 	"sync"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/set"
+	"github.com/MetalBlockchain/metalgo/ids"
+	"github.com/MetalBlockchain/metalgo/utils/set"
 
-	"github.com/ava-labs/spacesvm/chain"
+	"github.com/MetalBlockchain/spacesvm/chain"
 )
 
 var _ chain.Mempool = &Mempool{}

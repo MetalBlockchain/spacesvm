@@ -3,10 +3,10 @@
 _Authenticated, Hierarchical Key-Value Store w/EIP-712 Compatibility,
 State Expiry, and Fee-Based Metering_
 
-## Avalanche Subnets and Custom VMs
-Avalanche is a network composed of multiple sub-networks (called [subnets][Subnet]) that each contain
+## Metal Subnets and Custom VMs
+Metal is a network composed of multiple sub-networks (called [subnets][Subnet]) that each contain
 any number of blockchains. Each blockchain is an instance of a
-[Virtual Machine (VM)](https://docs.avax.network/learn/platform-overview#virtual-machines),
+[Virtual Machine (VM)](https://docs.metalblockchain.org/learn/platform-overview#virtual-machines),
 much like an object in an object-oriented language is an instance of a class. That is,
 the VM defines the behavior of the blockchain where it is instantiated. For example,
 [Coreth (EVM)][Coreth] is a VM that is instantiated by the
@@ -14,29 +14,14 @@ the VM defines the behavior of the blockchain where it is instantiated. For exam
 could deploy another instance of the EVM as their own blockchain (to take
 this to its logical conclusion).
 
-## AvalancheGo Compatibility
+## MetalGo Compatibility
 ```
-[v0.0.1] AvalancheGo@v1.7.0-v1.7.4
-[v0.0.2] AvalancheGo@v1.7.5-v1.7.6
-[v0.0.3] AvalancheGo@v1.7.7-v1.7.9
-[v0.0.4] AvalancheGo@v1.7.10
-[v0.0.5] AvalancheGo@v1.7.11-v1.7.12
-[v0.0.6] AvalancheGo@v1.7.13-v1.7.18
-[v0.0.7] AvalancheGo@v1.7.13-v1.7.18
-[v0.0.8] AvalancheGo@v1.8.0-v1.8.6
-[v0.0.9] AvalancheGo@v1.9.0-1.9.1
-[v0.0.10] AvalancheGo@v1.9.2
-[v0.0.11] AvalancheGo@v1.9.2
-[v0.0.12] AvalancheGo@v1.9.3
-[v0.0.13] AvalancheGo@v1.9.4
-[v0.0.14] AvalancheGo@v1.9.4
-[v0.0.14] AvalancheGo@v1.9.4
-[v0.0.15] AvalancheGo@v1.9.6-v1.9.7
+[v0.0.15] MetalGo@v1.9.6-v1.9.7
 ```
 
 ## Introduction
 Just as [Coreth] powers the [C-Chain], SpacesVM can be used to power its own
-blockchain in an Avalanche [Subnet]. Instead of providing a place to execute Solidity
+blockchain in an Metal [Subnet]. Instead of providing a place to execute Solidity
 smart contracts, however, SpacesVM enables authenticated, hierarchical storage of arbitrary
 keys/values using any [EIP-712] compatible wallet.
 
@@ -61,21 +46,8 @@ The canonical digest of a SpacesVM transaction is [EIP-712] compliant, so any
 Web3 wallet that can sign typed data can interact with SpacesVM.
 
 **[EIP-712] compliance in this case, however, does not mean that SpacesVM
-is an EVM or even an EVM derivative.** SpacesVM is a new Avalanche-native VM written
+is an EVM or even an EVM derivative.** SpacesVM is a new Metal-native VM written
 from scratch to optimize for storage-related operations.
-
-## Demo: [tryspaces.xyz]
-What better way to understand how the the SpacesVM works than to see it in action?
-Well anon, you are in luck!
-
-You can try out the SpacesVM at [tryspaces.xyz]. All you need
-is a [EIP-712] Compatible Web3 Wallet (like [MetaMask](https://metamask.io)) and some `SPC` (all 973k of
-you that interacted with the [C-Chain] more than 2 times got 10k `SPC` to get you
-started).
-
-This demo is running as an Avalanche [Subnet] on Fuji. It is **ALPHA LEVEL CODE** and may be
-restarted/have a few bugs in it. It exists for demonstration purposes **ONLY**
-but could be extended to run as a production-level [Subnet] on Avalanche Mainnet.
 
 ## How it Works
 ### Claim
@@ -549,21 +521,21 @@ Running the above commands will generate a binary and save it at
 `~/spacesvm/build/sqja3uK17MJxfC7AN8nGadBw9JK5BcrsNwNynsqP5Gih8M5Bm`.
 
 #### Move Binary
-Once the SpacesVM binary is built, you'll need to move it to AvalancheGo's
+Once the SpacesVM binary is built, you'll need to move it to MetalGo's
 plugin directory (within the `--build-dir`) so it can be run by your node.
-When building from source, this defaults to `~/avalanchego/build/plugins`.
+When building from source, this defaults to `~/metalgo/build/plugins`.
 This build directory is structured as:
 ```
 build-dir
-|_avalanchego
+|_metalgo_
     |_plugins
       |_evm
 ```
 
 To put the SpacesVM binary in the right place, run the following command
-(assuming the `avalanchego` and `spacesvm` repos are in the same folder):
+(assuming the `metalgo` and `spacesvm` repos are in the same folder):
 ```bash
-mv ./spacesvm/build/sqja3uK17MJxfC7AN8nGadBw9JK5BcrsNwNynsqP5Gih8M5Bm ./avalanchego/build/plugins;
+mv ./spacesvm/build/sqja3uK17MJxfC7AN8nGadBw9JK5BcrsNwNynsqP5Gih8M5Bm ./metalgo/build/plugins;
 ```
 
 #### Add Subnet to Whitelist
@@ -591,7 +563,7 @@ Example Node Args:
 
 #### Restart Node
 Once you've performed the following steps, you'll need to restart your
-AvalancheGo node for the changes to take effect.
+MetalGo node for the changes to take effect.
 
 If you completed the steps successfully, you'll see the node print out:
 ```bash
@@ -640,7 +612,7 @@ subnets that anyone can join.
 If you have any questions, reach out to @\_patrickogrady on Twitter!
 
 ### Running a local network
-[`scripts/run.sh`](scripts/run.sh) automatically installs [avalanchego], sets up a local network,
+[`scripts/run.sh`](scripts/run.sh) automatically installs [metalgo], sets up a local network,
 and creates a `spacesvm` genesis file. To build and run E2E tests, you need to set the variable `E2E` before it: `E2E=true ./scripts/run.sh 1.7.11`
 
 _See [`tests/e2e`](tests/e2e) to see how it's set up and how its client requests are made._
@@ -657,7 +629,7 @@ E2E=true ./scripts/run.sh 1.7.11
 
 ```bash
 # inspect cluster endpoints when ready
-cat /tmp/avalanchego-v1.7.11/output.yaml
+cat /tmp/metalgo-v1.7.11/output.yaml
 <<COMMENT
 endpoint: /ext/bc/2VCAhX6vE3UnXC6s1CBPE6jJ4c4cHWMfPgCptuWS59pQ9vbeLM
 logsDir: ...
@@ -701,23 +673,3 @@ COMMENT
 # to terminate the cluster
 kill 12811
 ```
-
-### Deploying Your Own Network
-Anyone can deploy their own instance of the SpacesVM as a subnet on Avalanche.
-All you need to do is compile it, create a genesis, and send a few txs to the
-P-Chain.
-
-You can do this by following the [subnet tutorial]
-or by using the [subnet-cli].
-
-[EIP-712]: https://eips.ethereum.org/EIPS/eip-712
-[tryspaces.xyz]: https://tryspaces.xyz
-[avalanchego]: https://github.com/ava-labs/avalanchego
-[subnet tutorial]: https://docs.avax.network/build/tutorials/platform/subnets/create-a-subnet
-[subnet-cli]: https://github.com/ava-labs/subnet-cli
-[Coreth]: https://github.com/ava-labs/coreth
-[C-Chain]: https://docs.avax.network/learn/platform-overview/#contract-chain-c-chain
-[Subnet]: https://docs.avax.network/learn/platform-overview/#subnets
-[Spaces Subnet Demo]: https://tryspaces.xyz
-[Spaces Demo Validator Request]: https://forms.gle/aDFWBLEP9GvHwaFG6
-[become a Fuji Validator]: https://docs.avax.network/build/tutorials/nodes-and-staking/staking-avax-by-validating-or-delegating-with-the-avalanche-wallet

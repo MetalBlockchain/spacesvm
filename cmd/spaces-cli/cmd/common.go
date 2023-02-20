@@ -6,7 +6,7 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/ava-labs/spacesvm/parser"
+	"github.com/MetalBlockchain/spacesvm/parser"
 )
 
 func getPathOp(args []string) (space string, key string, err error) {

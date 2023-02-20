@@ -11,9 +11,9 @@ import (
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 
-	"github.com/ava-labs/spacesvm/chain"
-	"github.com/ava-labs/spacesvm/client"
-	"github.com/ava-labs/spacesvm/parser"
+	"github.com/MetalBlockchain/spacesvm/chain"
+	"github.com/MetalBlockchain/spacesvm/client"
+	"github.com/MetalBlockchain/spacesvm/parser"
 )
 
 var setCmd = &cobra.Command{

@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"testing"
 
-	avagoVersion "github.com/ava-labs/avalanchego/version"
-	spacesVersion "github.com/ava-labs/spacesvm/version"
+	avagoVersion "github.com/MetalBlockchain/metalgo/version"
+	spacesVersion "github.com/MetalBlockchain/spacesvm/version"
 	"github.com/stretchr/testify/assert"
 )
 

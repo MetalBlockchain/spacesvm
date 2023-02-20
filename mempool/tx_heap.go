@@ -6,9 +6,9 @@ package mempool
 import (
 	"fmt"
 
-	"github.com/ava-labs/avalanchego/ids"
+	"github.com/MetalBlockchain/metalgo/ids"
 
-	"github.com/ava-labs/spacesvm/chain"
+	"github.com/MetalBlockchain/spacesvm/chain"
 )
 
 // txEntry is used to track the work transactions pay to be included in the
